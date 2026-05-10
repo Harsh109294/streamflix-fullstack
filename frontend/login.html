@@ -1,6 +1,8 @@
 const API = "https://streamflix-fullstack.onrender.com";
 
 async function login() {
+  console.log("LOGIN CLICKED");
+
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
@@ -10,7 +12,10 @@ async function login() {
     body: JSON.stringify({ email, password })
   });
 
+  console.log("RESPONSE:", res);
+
   const data = await res.json();
+  console.log("DATA:", data);
 
   if (res.ok) {
     window.location.href = "home.html";

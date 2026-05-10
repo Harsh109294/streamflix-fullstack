@@ -3,7 +3,7 @@ async function getWatchlist() {
   const userId = localStorage.getItem("userId");
 
   const res = await fetch(
-    `http://localhost:5000/api/watchlist/${userId}`
+    `https://streamflix-fullstack.onrender.com/api/watchlist/${userId}`
   );
 
   const data = await res.json();
@@ -31,7 +31,7 @@ async function getWatchlist() {
 
 async function removeMovie(id){
 
-  await fetch(`http://localhost:5000/api/watchlist/remove/${id}`,
+  await fetch(`https://streamflix-fullstack.onrender.com/api/watchlist/remove/${id}`,
   {
     method: "DELETE"
   });

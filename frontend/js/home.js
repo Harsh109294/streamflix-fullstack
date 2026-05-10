@@ -69,7 +69,7 @@ async function addWatchlist(movieId, title, image) {
 
   const userId = localStorage.getItem("userId");
 
-  await fetch("http://localhost:5000/api/watchlist/add", {
+  await fetch("https://streamflix-fullstack.onrender.com/api/watchlist/add", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

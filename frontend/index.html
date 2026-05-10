@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StreamFlix</title>
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<nav>
+
+  <h1>STREAMFLIX</h1>
+
+  <div>
+    <a href="watchlist.html">Watchlist</a>
+    <a href="profile.html">Profile</a>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+</nav>
+
+<section class="hero">
+  <h2>Unlimited Movies</h2>
+  <p>Watch trending movies and series anytime anywhere.</p>
+  <button>Watch Now</button>
+</section>
+
+<div class="search-box">
+  <input type="text" id="search" placeholder="Search movies..." onkeyup="searchMovies()">
+</div>
+
+<div class="loader" id="loader">
+  Loading Movies...
+</div>
+
+<div id="movies" class="movies"></div>
+
+<script src="js/home.js"></script>
+</body>
+</html>

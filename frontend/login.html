@@ -6,16 +6,14 @@ async function login() {
 
   const res = await fetch(`${API}/api/auth/login`, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password })
   });
 
   const data = await res.json();
 
   if (res.ok) {
-    window.location.href = "/home.html";
+    window.location.href = "home.html";
   } else {
     alert("Login failed");
   }
